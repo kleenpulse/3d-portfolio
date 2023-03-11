@@ -8,6 +8,7 @@ import Works from './Works';
 import Feedbacks from './Feedbacks';
 import Contact from './Contact';
 import Foobar from './Foobar';
+import DotRing from './dot-ring/DotRing';
 
 export {
   Hero,
@@ -22,5 +23,6 @@ export {
   EarthCanvas,
   BallCanvas,
   ComputersCanvas,
-  StarsCanvas
+  StarsCanvas,
+  DotRing
 }

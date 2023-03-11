@@ -11,11 +11,14 @@
 	font-family: "Poppins", sans-serif;
 	scroll-behavior: smooth;
 	color-scheme: dark;
+	cursor: none;
 }
 :root {
 	--bg-rgb: 9 3 37;
 	--blob-color-1: #bf09fc;
 	--blob-color-2: rgb(6, 68, 192);
+	--cursor-color: #f4ecff;
+	--cursor-border: #d4b9fd;
 }
 
 .hash-span {

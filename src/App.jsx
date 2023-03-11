@@ -11,6 +11,7 @@ import {
 	Works,
 	StarsCanvas,
 	Foobar,
+	DotRing,
 } from "./components";
 
 export const NavContext = createContext();
@@ -46,6 +47,7 @@ function App() {
 
 	return (
 		<Router>
+			<DotRing />
 			<NavContext.Provider value={{ linkCliked, setLinkCliked, handleMouse }}>
 				<div className="relative z-0 bg-primary">
 					<div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
