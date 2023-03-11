@@ -17,7 +17,7 @@ export const NavContext = createContext();
 
 function App() {
 	const [linkCliked, setLinkCliked] = useState(false);
-	const letters = "♢♀⌈П∑ㄱㄷÐΨ";
+	const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	let interval = null;
 	const handleMouse = (name) => {
 		let iteration = 0;
