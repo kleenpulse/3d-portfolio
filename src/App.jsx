@@ -41,7 +41,7 @@ function App() {
 			}
 
 			iteration += 1 / 3;
-		}, 50);
+		}, 30);
 	};
 
 	return (
