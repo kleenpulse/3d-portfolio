@@ -6,6 +6,7 @@ import { staggerContainer } from "../utils/motion";
 
 const handlePointer = (e) => {
 	const blob = document.getElementById("blob");
+
 	const { clientX, clientY } = e;
 
 	blob.animate(

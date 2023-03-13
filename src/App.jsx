@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import {
 	About,
@@ -13,10 +13,13 @@ import {
 	Foobar,
 	DotRing,
 } from "./components";
+import { MouseContext } from "./hoc/mouse-context";
 
 export const NavContext = createContext();
 
 function App() {
+	const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+
 	const [linkCliked, setLinkCliked] = useState(false);
 	const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	let interval = null;
@@ -46,9 +49,9 @@ function App() {
 	};
 
 	return (
-		<Router>
-			<DotRing />
-			<NavContext.Provider value={{ linkCliked, setLinkCliked, handleMouse }}>
+		<NavContext.Provider value={{ linkCliked, setLinkCliked, handleMouse }}>
+			<Router>
+				<DotRing />
 				<div className="relative z-0 bg-primary">
 					<div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
 						<Navbar />
@@ -65,8 +68,8 @@ function App() {
 						<Foobar />
 					</div>
 				</div>
-			</NavContext.Provider>
-		</Router>
+			</Router>
+		</NavContext.Provider>
 	);
 }
 

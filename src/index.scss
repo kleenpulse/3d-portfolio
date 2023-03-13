@@ -16,7 +16,7 @@
 :root {
 	--bg-rgb: 9 3 37;
 	--blob-color-1: #bf09fc;
-	--blob-color-2: rgb(6, 68, 192);
+	--blob-color-2: rgb(192, 62, 6);
 	--cursor-color: #f4ecff;
 	--cursor-border: #d4b9fd;
 }
@@ -441,33 +441,6 @@ $radial: rgba(7, 201, 245, 0.638);
 	backdrop-filter: blur(5px);
 	transition: backdrop-filter 2s ease;
 }
-
-// @keyframes pan-overlay {
-// 	from {
-// 		background-position: 0% 0%;
-// 	}
-
-// 	to {
-// 		background-position: 0% -100%;
-// 	}
-// }
-
-// .screen-overlay {
-// 	background: linear-gradient(
-// 		rgb(var(--bg-rgb) 0.15),
-// 		rgb(var(--bg-rgb) 0.15) 3px,
-// 		transparent 3px,
-// 		transparent 9px
-// 	);
-// 	background-size: 100% 9px;
-// 	height: 100%;
-// 	width: 100%;
-// 	animation: pan-overlay 22s infinite linear;
-// 	position: absolute;
-// 	z-index: 2;
-// 	left: 0px;
-// 	top: 0px;
-// }
 
 @keyframes pan-image {
 	0% {

@@ -8,6 +8,7 @@ import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { useContext } from "react";
 import { NavContext } from "../App";
+import { MouseContext } from "../hoc/mouse-context";
 
 const ProjectCard = ({
 	index,
@@ -19,6 +20,7 @@ const ProjectCard = ({
 	source_code_link,
 }) => {
 	const { handleMouse } = useContext(NavContext);
+	const { cursorType, cursorChangeHandler } = useContext(MouseContext);
 	return (
 		<motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
 			<Tilt
@@ -40,6 +42,8 @@ const ProjectCard = ({
 						<div
 							onClick={() => window.open(source_code_link, "_blank")}
 							className="bg-black-200 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+							onMouseEnter={() => cursorChangeHandler("link-hover out")}
+							onMouseLeave={() => cursorChangeHandler("")}
 						>
 							<img src={github} alt="git-hub" />
 						</div>
@@ -47,6 +51,8 @@ const ProjectCard = ({
 						<div
 							onClick={() => window.open(live_link, "_blank")}
 							className="bg-black-200 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer ml-1"
+							onMouseEnter={() => cursorChangeHandler("link-hover out")}
+							onMouseLeave={() => cursorChangeHandler("")}
 						>
 							<span className="text-[23px] font-bold">↗</span>
 						</div>

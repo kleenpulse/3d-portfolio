@@ -5,8 +5,11 @@ import { styles } from "../style";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
 import { NavContext } from "../App";
+import { MouseContext } from "../hoc/mouse-context";
 
 const Navbar = () => {
+	const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+
 	const [active, setActive] = useState("");
 	const [toggle, setToggle] = useState(false);
 	const { setLinkCliked } = useContext(NavContext);
@@ -23,6 +26,8 @@ const Navbar = () => {
 						setActive("");
 						window.scrollTo(0, 0);
 					}}
+					onMouseEnter={() => cursorChangeHandler("link-hover")}
+					onMouseLeave={() => cursorChangeHandler("")}
 				>
 					<img
 						src={logo}
@@ -47,6 +52,8 @@ const Navbar = () => {
 								setActive(link.title);
 								setLinkCliked(link.id !== "about" && false);
 							}}
+							onMouseEnter={() => cursorChangeHandler("link-hover")}
+							onMouseLeave={() => cursorChangeHandler("")}
 						>
 							<a
 								href={`#${link.id}`}

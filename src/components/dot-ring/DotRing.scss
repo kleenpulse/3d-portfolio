@@ -7,8 +7,7 @@
 	border: 2px solid var(--cursor-color);
 	border-radius: 100%;
 	transform: translate(-50%, -50%);
-	transition-duration: 100ms;
-	transition-timing-function: ease-out;
+	transition: all 400ms ease !important;
 	will-change: width, height, transform, border;
 	z-index: 99999;
 	pointer-events: none;
@@ -27,13 +26,46 @@
 	pointer-events: none;
 }
 
-.ring.hovered {
+.ring.link-hover {
 	width: 50px;
 	height: 50px;
 	border-width: 3px;
-	border-color: lightgray;
+	box-shadow: 0 0 20px #0ff;
 }
 
 .dot.hovered {
 	display: none;
+}
+
+.dot.link-hover {
+	width: 15px;
+	height: 15px;
+	background: #0ff;
+	box-shadow: 0 0 20px #0ff;
+}
+
+.dot.link-hover.out {
+	background: transparent;
+	box-shadow: none;
+
+	&::after {
+		content: "↗";
+		opacity: 1;
+		position: absolute;
+		color: rgb(105, 122, 122);
+		left: -7px;
+		top: -20px;
+		color: #fff;
+		text-shadow: 0 0 10px #0ff;
+
+		font-size: 40px;
+		font-weight: 700;
+		animation: bob 2s ease infinite;
+
+		@keyframes bob {
+			50% {
+				translate: 5px -2px;
+			}
+		}
+	}
 }

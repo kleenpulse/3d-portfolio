@@ -176,7 +176,7 @@ const experiences = [
         ],
     },
 ];
-const vxrcel = `<a href="https://github.com/kleenpulse" target="_blank" class='font-bold text-cyan-400 pointer-events-auto'>Vxrcel</a>`
+const vxrcel = `<a   href="https://github.com/kleenpulse" target="_blank" class='font-bold text-cyan-400 pointer-events-auto'>Vxrcel</a>`
 
 const testimonials = [
     {
