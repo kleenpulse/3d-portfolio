@@ -17,8 +17,9 @@
 	--bg-rgb: 9 3 37;
 	--blob-color-1: #bf09fc;
 	--blob-color-2: rgb(192, 62, 6);
-	--cursor-color: #f4ecff;
+	--cursor-color: #d1bdef;
 	--cursor-border: #d4b9fd;
+	--custom-cursor: #a561f3;
 }
 
 .hash-span {
@@ -324,7 +325,6 @@ h2,
 
 @keyframes slideUp {
 	100% {
-		backdrop-filter: blur(10px);
 		translate: 0 0;
 		opacity: 1;
 		border: 1px solid #cbb4f6;

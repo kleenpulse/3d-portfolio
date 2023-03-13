@@ -76,7 +76,7 @@ const Navbar = () => {
 					<div
 						className={`${
 							!toggle ? "hidden" : "flex"
-						} p-6 absolute top-20 right-0 mx-4 my-2 min-w[140px] z-10 rounded-xl nav-mobile`}
+						} p-6 absolute top-20 right-0 mx-4 my-2 min-w[140px] z-[99999] rounded-xl nav-mobile bg-[rgba(9,4,27,0.83)]`}
 					>
 						<ul className="list-none flex  flex-col gap-4 items-start justify-end ">
 							{navLinks.map((link) => (
@@ -86,11 +86,13 @@ const Navbar = () => {
 										active === link.title
 											? "text-white newNav-link"
 											: "text-[#ffedff]"
-									} font-poppins text-[16px] uppercase font-medium cursor-pointer `}
+									} font-poppins text-[16px] uppercase font-medium cursor-pointer mb-4 last:mb-0`}
 									onClick={() => {
 										setActive(link.title);
 										setToggle(!toggle);
 									}}
+									onMouseEnter={() => cursorChangeHandler("link-hover")}
+									onMouseLeave={() => cursorChangeHandler("")}
 								>
 									<a href={`#${link.id}`}>{link.title}</a>
 								</li>
