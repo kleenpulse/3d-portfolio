@@ -7,9 +7,12 @@ import { styles } from "../style";
 import { EarthCanvas } from "./canvas";
 import { slideIn } from "../utils/motion";
 import { NavContext } from "../App";
+import { MouseContext } from "../hoc/mouse-context";
 
 const Contact = () => {
 	const { handleMouse } = useContext(NavContext);
+	const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+
 	const [form, setForm] = useState({
 		name: "",
 		email: "",
@@ -122,7 +125,9 @@ const Contact = () => {
 					</label>
 					<button
 						type="submit"
-						className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+						className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl hover:bg-white hover:text-black-200 duration-500"
+						onMouseEnter={() => cursorChangeHandler("link-hover")}
+						onMouseLeave={() => cursorChangeHandler("")}
 					>
 						{loading ? "Sending" : "Send"}
 					</button>
