@@ -313,7 +313,24 @@ h2,
 		100% 71.18%
 	);
 }
-
+.darken {
+	&::before {
+		content: "";
+		background: #00000094;
+		opacity: 0;
+		position: fixed;
+		height: 100vh;
+		width: 100vw;
+		right: 0;
+		top: 0;
+		animation: fade-bg 0.5s ease forwards;
+	}
+	@keyframes fade-bg {
+		100% {
+			opacity: 1;
+		}
+	}
+}
 .nav-mobile {
 	translate: 0 100px;
 	opacity: 0;

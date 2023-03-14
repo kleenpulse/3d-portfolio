@@ -64,11 +64,15 @@ const Navbar = () => {
 						</li>
 					))}
 				</ul>
-				<div className="sm:hidden flex flex-1 justify-end items-center">
+				<div
+					className={`sm:hidden flex flex-1 justify-end items-center  relative ${
+						toggle && "darken"
+					}`}
+				>
 					<img
 						src={toggle ? close : menu}
 						alt="menu"
-						className="w-[28px] h-[28px] object-contain cursor-pointer"
+						className="w-[28px] h-[28px] object-contain cursor-pointer absolute"
 						onClick={() => {
 							setToggle(!toggle);
 						}}
