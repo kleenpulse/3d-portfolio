@@ -14,6 +14,8 @@ import {
 	DotRing,
 } from "./components";
 import { MouseContext } from "./hoc/mouse-context";
+import SmoothCursor from "./components/SmoothCursor";
+import LenisProvider from "./components/LenisProvider";
 
 export const NavContext = createContext();
 
@@ -51,7 +53,7 @@ function App() {
 	return (
 		<NavContext.Provider value={{ linkCliked, setLinkCliked, handleMouse }}>
 			<Router>
-				<DotRing />
+				<SmoothCursor />
 				<div className="relative z-0 bg-primary">
 					<div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
 						<Navbar />

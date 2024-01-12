@@ -5,7 +5,7 @@ export const MouseContext = createContext({
 	cursorChangeHandler: () => {},
 });
 
-const MouseContextProvider = (props) => {
+const MouseContextProvider = ({ children }) => {
 	const [cursorType, setCursorType] = useState("");
 
 	const cursorChangeHandler = (cursorType) => {
@@ -19,7 +19,7 @@ const MouseContextProvider = (props) => {
 				cursorChangeHandler: cursorChangeHandler,
 			}}
 		>
-			{props.children}
+			{children}
 		</MouseContext.Provider>
 	);
 };
