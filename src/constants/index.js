@@ -6,7 +6,7 @@ import {
     javascript,
     typescript,
 
-    css,
+    next,
     reactjs,
 
     tailwind,
@@ -46,21 +46,18 @@ export const navLinks = [
 
 const services = [
     {
-        title: "Web Developer",
+        title: "React Developer",
         icon: web,
     },
     {
-        title: "React Developer",
+        title: "Nextjs  Developer",
         icon: mobile,
     },
     {
         title: "Backend Developer",
         icon: backend,
     },
-    {
-        title: "Content Creator",
-        icon: creator,
-    },
+
     {
         title: "Gamer",
         icon: web,
@@ -68,11 +65,11 @@ const services = [
 ];
 
 const technologies = [
-
     {
-        name: "CSS 3",
-        icon: css,
+        name: "Next JS",
+        icon: next,
     },
+
     {
         name: "JavaScript",
         icon: javascript,
@@ -94,10 +91,7 @@ const technologies = [
         name: "Node JS",
         icon: nodejs,
     },
-    {
-        name: "MongoDB",
-        icon: mongodb,
-    },
+
 
     {
         name: "git",

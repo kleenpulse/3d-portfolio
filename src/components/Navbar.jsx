@@ -34,9 +34,9 @@ const Navbar = () => {
 						alt="logo"
 						className="w-[50px] h-[50px] rounded-full"
 					/>
-					<p className="text-white text-[18px] font-bold cursor-pointer flex">
-						Vxrcel &nbsp;
-						<span className="im-vercel liquid-time">|&nbsp; LiquidTime</span>
+					<p className="text-white text-[18px] lg:text-3xl font-bold cursor-pointer flex">
+						&nbsp;
+						<span className="im-vercel liquid-time "> Vxrcel</span>
 					</p>
 				</Link>
 				<ul className="list-none hidden sm:flex flex-row gap-10">

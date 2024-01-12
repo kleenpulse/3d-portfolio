@@ -25,10 +25,12 @@ import tesla from "./company/tesla.png";
 import aiImage from "./ai-image.png";
 import finance from "./finance.png";
 import games from "./games.png";
+import next from "./tech/next.png";
 
 import robot from './robot.png'
 
 export {
+  next,
   logo,
   backend,
   creator,
